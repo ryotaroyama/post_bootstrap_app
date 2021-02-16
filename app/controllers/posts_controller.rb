@@ -19,7 +19,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to @post, notice: "投稿しました"
     else
-      flash.now[:alert] = "投稿に失敗しました"
+      flash[:alert] = "投稿に失敗しました"
       render :new
     end
   end
